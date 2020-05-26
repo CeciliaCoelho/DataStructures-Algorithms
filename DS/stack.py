@@ -12,12 +12,12 @@ def push(stack , element):
 
 def pop(stack):
     if not isEmpty(stack):
-        print(stack[0])
-        del stack[0]
+        print(stack[-1])
+        del stack[-1]
 
 def peek(stack):
     if not isEmpty(stack):
-        print(stack[0])
+        print(stack[-1])
 
 def see(stack):
     for i in range(0,len(stack)):
@@ -27,7 +27,9 @@ def see(stack):
 
 a = create()
 push(a,1)
-see(a)
+push(a,2)
+peek(a)
 pop(a)
-push(a,4)
+peek(a)
+pop(a)
 peek(a)
