@@ -14,6 +14,7 @@ def pop(stack):
     if not isEmpty(stack):
         print(stack[-1])
         del stack[-1]
+    return stack
 
 def peek(stack):
     if not isEmpty(stack):
@@ -27,9 +28,5 @@ def see(stack):
 
 a = create()
 push(a,1)
-push(a,2)
-peek(a)
 pop(a)
-peek(a)
 pop(a)
-peek(a)
