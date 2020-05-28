@@ -1,35 +1,37 @@
 #complexity O(1)
+class queue(object):
 
-def create():
-    q = []
-    return q
 
-def enqueue(q , element):
-    q.append(element)
+    def __init__(self):
+        self.q = []
 
-def dequeue(q):
-    if not isEmpty(q):
-        del q[0]
-        return q
 
-def isEmpty(q):
-    if len(q) == 0:
-        print("Queue is empty!")
-    return (len(q) == 0)
+    def enqueue(self , element):
+        self.q.append(element)
 
-def peek(q):
-    print(q[0])
+    def dequeue(self):
+        if not self.isEmpty():
+            del self.q[0]
+            return self.q
 
-def see(q):
-    for i in q:
-        print(i)
+    def isEmpty(self):
+        if len(self.q) == 0:
+            print("Queue is empty!")
+        return (len(self.q) == 0)
 
-a = create()
-enqueue(a,1)
-peek(a)
-enqueue(a,2)
-dequeue(a)
-isEmpty(a)
-peek(a)
-dequeue(a)
-dequeue(a)
+    def peek(self):
+        print(self.q[0])
+
+    def see(self):
+        for i in self.q:
+            print(i)
+
+a = queue()
+a.enqueue(1)
+a.peek()
+a.enqueue(2)
+a.dequeue()
+a.isEmpty()
+a.peek()
+a.dequeue()
+a.dequeue()

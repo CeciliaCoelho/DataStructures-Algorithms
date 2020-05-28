@@ -1,33 +1,34 @@
+class Stack(object):
 
-def create():
-    stack = []
-    return stack
-
-def isEmpty(stack):
-    if len(stack) == 0:
-        print("Stack is empty!")
-    return(len(stack) == 0)
-
-def push(stack , element):
-    stack.append(element)
-
-def pop(stack):
-    if not isEmpty(stack):
-        print(stack[-1])
-        del stack[-1]
-    return stack
-
-def peek(stack):
-    if not isEmpty(stack):
-        print(stack[-1])
-
-def see(stack):
-    for i in range(0,len(stack)):
-        print(stack[i])
+    def __init__(self):
+        self.stack = []
 
 
+    def isEmpty(self):
+        if len(self.stack) == 0:
+            print("Stack is empty!")
+        return(len(self.stack) == 0)
 
-a = create()
-push(a,1)
-pop(a)
-pop(a)
+    def push(self , element):
+        self.stack.append(element)
+
+    def pop(self):
+        if not self.isEmpty():
+            print(self.stack[-1])
+            del self.stack[-1]
+        return self.stack
+
+    def peek(self):
+        if not self.isEmpty():
+            print(self.stack[-1])
+
+    def see(self):
+        for i in range(0,len(self.stack)):
+            print(self.stack[i])
+
+
+
+a = Stack()
+a.push(1)
+a.pop()
+a.pop()
