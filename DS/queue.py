@@ -1,3 +1,5 @@
+#complexity O(1)
+
 def create():
     q = []
     return q
