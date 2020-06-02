@@ -1,3 +1,4 @@
+#average O(nlogn), worst case O(n^2)
 def quicksort(array):
     if len(array) < 2:
             return array
